@@ -1,0 +1,17 @@
+name: Send Telegram Message
+on:
+  workflow_dispatch:  # Запуск вручную
+  schedule:
+    - cron: '0 12 * * *'  # Каждый день в 12:00 UTC (15:00 МСК)
+jobs:
+  send-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Загружаем код
+        uses: actions/checkout@v4
+      - name: Устанавливаем зависимости
+        run: pip install requests
+      - name: Отправляем сообщение
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: python main.py
