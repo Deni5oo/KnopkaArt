@@ -1,7 +1,7 @@
 import os
 import requests
 
-BOT_TOKEN = os.getenv("7614806114:AAF0pwSVhiQs8HKr5x7g4GeZOI4wT-lt95M")  # Токен бота (скрыт в настройках)
+BOT_TOKEN = os.getenv("")  # Токен бота (скрыт в настройках)
 CHANNEL_USERNAME = "https://t.me/ArtNeir0"  # Например, "@art_neuro"
 
 # Создаем кнопку для подписки
